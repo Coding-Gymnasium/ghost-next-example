@@ -13,6 +13,7 @@ export default async function Home() {
             title={post.title}
             plainText={post.excerpt}
             excerpt={post.excerpt}
+            postSlug={post.slug}
           />
         );
       })}
