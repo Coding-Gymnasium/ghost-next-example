@@ -29,3 +29,14 @@ export async function getPosts() {
       console.error(e);
     });
 }
+
+export async function getPost(postSlug) {
+  return await api.posts
+    .read({
+      slug: postSlug,
+      formats: "plaintext",
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+}
